@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔥 Streakify
 
-## Getting Started
+**Social productivity powered by proof.**
 
-First, run the development server:
+Streakify is a high-performance productivity platform designed to turn your daily habits into an engaging social experience. Build streaks, join real-time focus rooms, and stay accountable with your circle.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Streakify Header](https://via.placeholder.com/1200x400.png?text=Streakify+Productivity+Experience)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 📅 Social Streak Tracking
+- **Friend Grid**: See what your friends are working on in real-time.
+- **Proof of Work**: Every streak update requires a screenshot/proof to maintain accountability.
+- **Interactive Calendar**: Visualize your consistency with a dynamic activity heatmap.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ⏱️ Live Focus Rooms
+- **Real-Time Collaboration**: Join focus sessions with friends using a production-grade Pomodoro timer.
+- **Interactive Chat**: Built-in messaging for motivation and coordination.
+- **Shared Task List**: Manage room-specific goals together.
+- **Member Presence**: Live activity bubbles showing who is currently working and on what.
 
-## Learn More
+### 🏆 Gamified Experience
+- **Global Leaderboard**: Compete with users worldwide for the top streak and productivity score.
+- **Micro-Interactions**: Premium animations and haptic-feel interactions using Framer Motion.
+- **Status Updates**: Share your current focus task with the community.
 
-To learn more about Next.js, take a look at the following resources:
+### 📱 Premium Mobile Experience
+- **Fully Responsive**: Identical desktop-grade experience on mobile devices.
+- **Bottom Navigation**: Intuitive mobile-first navigation bar.
+- **Staggered Animations**: Fluid list transitions and responsive layouts.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Database & Auth**: [Firebase](https://firebase.google.com/) (Firestore & Authentication)
+- **Storage**: Firebase Storage (for proof of work images)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion 12](https://motion.dev/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-## Deploy on Vercel
+## 📦 Installation & Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/ASIKKANI/Streakify.git
+   cd Streakify
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Environment Setup**:
+   Create a `.env.local` file and add your Firebase configurations:
+   ```env
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+   ```
+
+4. **Run local development server**:
+   ```bash
+   npm run dev
+   ```
+
+## 🌐 Deployment
+
+This project is optimized for deployment on **Vercel** or **Netlify**.
+
+1. Connect your GitHub repository to Vercel/Netlify.
+2. Add the environment variables from your `.env.local`.
+3. The build command is `npm run build` and the output directory is `.next`.
+
+---
+
+Built with ❤️ for productivity beasts.
