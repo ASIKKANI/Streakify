@@ -1,14 +1,18 @@
+<div align="center">
+
 # Streakify
 
 **Social productivity powered by proof.**
-
-Streakify is a high-performance productivity platform designed to turn your daily habits into an engaging social experience. Build streaks, join real-time focus rooms, and stay accountable with your circle.
 
 ![Productivity](https://img.shields.io/badge/Productivity-Social%20First-333333?style=for-the-badge)
 ![Focus](https://img.shields.io/badge/Focus-Real--Time-1DB954?style=for-the-badge)
 ![Build](https://img.shields.io/badge/Build-Next.js%2015-000000?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Security-Firebase%20Auth-FFCA28?style=for-the-badge)
 ![Style](https://img.shields.io/badge/Style-Tailwind%20CSS%204-38B2AC?style=for-the-badge)
+
+</div>
+
+Streakify is a high-performance productivity platform designed to turn your daily habits into an engaging social experience. Build streaks, join real-time focus rooms, and stay accountable with your circle.
 
 ## Key Features
 
