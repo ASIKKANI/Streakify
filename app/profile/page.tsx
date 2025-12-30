@@ -4,7 +4,7 @@ import { useAuth } from "@/context/AuthContext";
 import Sidebar from "@/components/Sidebar";
 import Card from "@/components/ui/Card";
 import { User, Shield, Share2, MoreHorizontal, MessageSquare, Edit2, Trash2, Flame, Clock, Trophy, Camera } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { getUserProfile, UserProfile, updateUserProfile } from "@/lib/db/users";
 import { DailyLog, getRecentLogs, deleteDailyLog } from "@/lib/db/logs";
 import { PageTransition, StaggerContainer, StaggerItem } from "@/components/ui/motion-wrapper";
@@ -17,7 +17,7 @@ import StreakCalendar from "@/components/StreakCalendar";
 
 import { useSearchParams } from "next/navigation";
 
-export default function ProfilePage() {
+function ProfileContent() {
     const { user } = useAuth();
     const searchParams = useSearchParams();
     const targetUid = searchParams.get("uid") || user?.uid;
@@ -260,5 +260,13 @@ export default function ProfilePage() {
                 </PageTransition>
             </main>
         </div>
+    );
+}
+
+export default function ProfilePage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>}>
+            <ProfileContent />
+        </Suspense>
     );
 }

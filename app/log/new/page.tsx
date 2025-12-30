@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import { useStorage } from "@/hooks/useStorage";
@@ -11,7 +11,7 @@ import Input from "@/components/ui/Input";
 import Card from "@/components/ui/Card";
 import { UploadCloud, X } from "lucide-react";
 
-export default function NewLogPage() {
+function NewLogContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const friendshipId = searchParams.get("friendshipId");
@@ -153,5 +153,13 @@ export default function NewLogPage() {
                 </form>
             </Card>
         </div>
+    );
+}
+
+export default function NewLogPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>}>
+            <NewLogContent />
+        </Suspense>
     );
 }
